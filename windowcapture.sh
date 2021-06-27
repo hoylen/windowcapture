@@ -160,6 +160,8 @@ Options:
        --version      display version information and exit
   -h | --help         display this help and exit
 size = resize to WIDTHxHEIGHT, e.g. 960x, x500, 1920x1080 (default: $DEF_STR)
+
+Documentation: <https://github.com/hoylen/windowcapture>
 EOF
   exit 0
 fi

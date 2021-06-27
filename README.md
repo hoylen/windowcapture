@@ -131,3 +131,5 @@ using the _output_ command line option.
 ## See also
 
 - The man page for the _screencapture_ program on macOS.
+
+- [GitHub repository](https://github.com/hoylen/windowcapture) windowcapture.
