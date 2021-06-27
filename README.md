@@ -1,4 +1,4 @@
-# Window capture for macOS
+# windowcapture - window resize and capture for macOS
 
 Resize a window and take a screen capture of it.
 
@@ -22,50 +22,73 @@ The window can be resized before the capture. Either:
 
 ### Options
 
-`-a | --application`
-: the name of the application whose window will be captured.
-Defaults to Safari. The application name is not case sensitive.
+#### Window options
 
-`-d | --delay SECONDS`
-: number of seconds delay between raising and resizeing the window and
-when the capture is taken. Useful for interacting with pop-up menus
-and other on-screen items so they are included in the capture.
+- `-a | --application` app_name
 
-`-s | --shadow`
-: include the shadow behind the window in the capture. The image
-in the PNG file will be larger than the dimensions of the window.
-By default, the shadow is not included and only the window is captured.
+    The name of the application whose window will be captured.
+    Defaults to Safari. The application name is not case sensitive.
 
-`-c | --center`
-: move the window to the center of the screen. This has no effect
-on the capture, but can make it more obvious which window is being
-captured.
+- `-c | --center`
 
-`-o | --output FILENAME`
-: the name of the file the capture will be written to. Specify "-"
-as the filename to capture to the clipboard instead of to a file.
+    Move the window to the center of the screen. This has no effect on
+    the capture, but can make it more obvious which window is being
+    captured.
 
-`-f | --force`
-: overwrite the output file, if it already exists. Normally, the
-capture will not proceed if the output file already exists.
+#### Capture options
 
-`-v | --verbose`
-: output extra information when running.
+- `-d | --delay` seconds
 
-`--version`
-: display version information and exits.
+    Number of seconds delay between raising and resizeing the window
+    and when the capture is taken. Useful for interacting with pop-up
+    menus and other on-screen items so they are included in the
+    capture.
 
-`-h | --help`
-: display a short help message and exits.
+- `-s | --shadow`
+
+    Include the shadow behind the window in the capture. The image in
+    the PNG file will be larger than the dimensions of the window.  By
+    default, the shadow is not included and only the window is
+    captured.
+
+#### Output options
+
+- `-o | --output` filename
+
+    The name of the file the capture will be written to.
+
+    Specify "-" as the filename to capture to the clipboard instead of
+    to a file.
+
+- `-f | --force`
+
+    Overwrite the output file, if it already exists. Normally, the
+    capture will not proceed if the output file already exists.
+
+#### General options
+
+- `-v | --verbose`
+
+    Output extra information when running.
+
+- `--version`
+
+    Display the version information and exits.
+
+- `-h | --help`
+
+    Display a short help message and exits.
 
 ### Arguments
 
-`size`
-: resize the window to the specified size. This can be specified as:
-the width only (e.g. 960x) to leave the height unchanged; the height
-only (e.g. x500) to leave the width unchanged; both width and height
-(e.g. 1920x1080); or omitted to not change the size of the window at
-all.
+- `size`
+
+    Resize the window to the specified size.
+
+    This can be specified as: the width only (e.g. 960x) to leave the
+    height unchanged; the height only (e.g. x500) to leave the width
+    unchanged; both width and height (e.g. 1920x1080); or omitted to
+    not change the size of the window at all.
 
 ## Examples
 
@@ -112,7 +135,7 @@ This program has been tested on macOS 11.4 (Big Sur).
 
 ### Does not work with Google Chrome
 
-Workaround: use the utility to resize the window, and then manually
+Workaround: use the program to resize the window, and then manually
 capture the window: using ⌘-Shift-4, then press the space key and
 select the window.
 
@@ -130,6 +153,6 @@ using the _output_ command line option.
 
 ## See also
 
-- The man page for the _screencapture_ program on macOS.
+- screencapture(1) --- man page for the _screencapture_ program on macOS.
 
-- [GitHub repository](https://github.com/hoylen/windowcapture) windowcapture.
+- [GitHub repository](https://github.com/hoylen/windowcapture) for windowcapture.
